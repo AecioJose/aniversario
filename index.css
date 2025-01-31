@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fafafa;
+    font-family: "Roboto", Arial, sans-serif;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+#loading {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+#spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-top: 3px solid black;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+#message {
+    font-size: 32px;
+    font-weight: bold;
+    display: none;
+    white-space: normal;
+    word-break: break-word;
+    overflow: hidden;
+    max-width: 90%;
+}
+@media (max-width: 600px) {
+    #message {
+        font-size: 24px;
+    }
+}
+.img-container {
+    width: 90vw;
+    height: 35vh;
+    position: absolute;
+    bottom: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#img {
+    opacity: 0;
+    height: 100%;
+    width: auto;
+    z-index: 999;
+}
